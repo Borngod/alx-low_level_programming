@@ -13,12 +13,9 @@ int main(void)
 	{
 		putchar(i);
 	}
-
-        char b;
-
-        for (b = 'A'; b <= 'Z'; ++b)
+        for (i = 'A'; i <= 'Z'; ++i)
 	{
-		putchar(b);
+		putchar(i);
 	}
 
         putchar('\n');
