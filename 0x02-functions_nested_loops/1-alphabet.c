@@ -3,9 +3,8 @@
 /**
   *main- A function that prints the alphabet, in lowercase, followed by a new line.
   *
-  *Return:Always 0.
   */
-int main(void)
+void print_alphabet(void)
 {
 	char i;
 
@@ -13,6 +12,4 @@ int main(void)
 		_putchar(i);
 
 	_putchar('\n');
-
-	return (0);
 }
