@@ -3,6 +3,7 @@
 /**
   *_isupper-checks for uppercase character
   *@c:is an interger
+  *
   *Return: 1 if uppercase or 0 otherwise
   */
 int _isupper(int c)
