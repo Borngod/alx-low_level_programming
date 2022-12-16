@@ -6,13 +6,13 @@
   */
 void print_line(int n)
 {
-	if (n <= 0)
-		_putchar('\n')
+	int len;
 
-	int i = 1;
+	if (n > 0)
+	{
+		for (len = 0; len < n; len++)
+			_putchar('_');
+	}
 
-	while (i++ <= n)
-		_putchar('_')
-
-	_putchar('\n')
+	_putchar('\n');
 }
