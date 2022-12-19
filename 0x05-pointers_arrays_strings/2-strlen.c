@@ -9,7 +9,7 @@
   */
 int _strlen(char *s)
 {
-	_printf("%d\n", _strlen(*s));
+	printf("%d\n", strlen(*s));
 
 	return (0);
 
