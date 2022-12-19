@@ -3,11 +3,14 @@
 
 /**
   *_strlen-function that returns the length of a string
-  *@s-the variable containing the string
+  *@s:the variable containing the string
   *
+  *Return:Always 0(Success)
   */
 int _strlen(char *s)
 {
 	_printf("%d\n", _strlen(*s));
+
+	return (0);
 
 }
