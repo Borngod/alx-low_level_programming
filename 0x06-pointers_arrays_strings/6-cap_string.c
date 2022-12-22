@@ -1,38 +1,38 @@
-#include "holberton.h"
+#include "main.h"
 
 /**
- * cap_string - Capitalizes all words of a string.
- * @str: The string to be capitalized.
- *
- * Return: A pointer to the changed string.
+ * cap_string - capitalizing all first letters
+ * @str : string pointer
+ * Return: Always 0.
  */
 char *cap_string(char *str)
 {
-	int index = 0;
+	int a;
 
-	while (str[index])
+	for (a = 0; str[a] != '\0'; a++)
 	{
-		while (!(str[index] >= 'a' && str[index] <= 'z'))
-			index++;
-
-		if (str[index - 1] == ' ' ||
-		    str[index - 1] == '\t' ||
-		    str[index - 1] == '\n' ||
-		    str[index - 1] == ',' ||
-		    str[index - 1] == ';' ||
-		    str[index - 1] == '.' ||
-		    str[index - 1] == '!' ||
-		    str[index - 1] == '?' ||
-		    str[index - 1] == '"' ||
-		    str[index - 1] == '(' ||
-		    str[index - 1] == ')' ||
-		    str[index - 1] == '{' ||
-		    str[index - 1] == '}' ||
-		    index == 0)
-			str[index] -= 32;
-
-		index++;
+		if (str[a] == ' '
+		    || str[a] == '\t'
+		    || str[a] == '\n'
+		    || str[a] == '.'
+		    || str[a] == ','
+		    || str[a] == '!'
+		    || str[a] == '?'
+		    || str[a] == '"'
+		    || str[a] == '('
+		    || str[a] == ')'
+		    || str[a] == '{'
+		    || str[a] == '}')
+		{
+			a++;
+			if (str[a] >= 'A' && str[a] <= 'Z')
+				a++;
+			else if (str[a] >= 'a' && str[a] <= 'z')
+				str[a] = str[a] - 32;
+			a--;
+		}
+		else if (str[0] >= 'a' && str[0] <= 'z')
+			str[0] = str[0] - 32;
 	}
-
 	return (str);
 }
