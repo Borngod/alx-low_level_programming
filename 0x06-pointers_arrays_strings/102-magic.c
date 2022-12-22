@@ -1,38 +1,23 @@
-#include "holberton.h"
+#include <stdio.h>
 
-/**
- * print_number - function to print integers
- * @n : integer value
- * Return: Always 0.
- */
-void print_number(int n)
+int main(void)
 {
-	unsigned int a, b, count, tmp, pow;
+  int n;
+  int a[5];
+  int *p;
 
-	a = n;
-	pow = b = 1;
-
-	if (n < 0)
-	{
-		a = a * -1;
-		_putchar('-');
-	}
-	tmp = a;
-
-	while (tmp > 9)
-	{
-		b++;
-		tmp = tmp / 10;
-	}
-	for (count = 1; count < b; count++)
-		pow = pow * 10;
-
-	while (pow > 1)
-	{
-		_putchar((a / pow) % 10 + '0');
-		pow = pow / 10;
-	}
-	_putchar(a % 10 + '0');
+  a[2] = 1024;
+  p = &n;
+  /*
+   * write your line of code here...
+   * Remember:
+   * - you are not allowed to use a
+   * - you are not allowed to modify p
+   * - only one statement
+   * - you are not allowed to code anything else than this line of code
+   */
+  *(p + 5) = 98;
+  /* ...so that this prints 98\n */
+  printf("a[2] = %d\n", a[2]);
+  return (0);
 }
-Footer
-© 2022 Git
