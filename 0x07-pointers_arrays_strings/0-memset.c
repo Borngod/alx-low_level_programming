@@ -1,12 +1,13 @@
 #include "main.h"
 
 /**
-  *_memset-fills the memory with a constanat byte
-  *
-  *@s:this a pointer
-  *@b:this a variable with a char data type
-  *@n:this is a variable with an int datatype
-  */
+ * _memset - copies data
+ * @s: the source to copy it to
+ * @b: the number of bytes to be overwritten
+ * @n: integer variable
+ *
+ * Return: Nothing.
+ */
 char *_memset(char *s, char b, unsigned int n)
 {
 	unsigned int c;
