@@ -1,20 +1,18 @@
-#inlcude "main.h"
+#include "main.h"
 
 /**
-  *_memcpy - prints buffer in area.
-  *@dest:a variable
-  *@src: A VARIABLE
-  *@n: positive integer
-  *
-  *return: returns dest
-  */
+ * _memcpy - prints buffer in hexa
+ * @dest: the array to copy over
+ * @src: the source to cpy
+ * @n: unsigned int variable
+ *
+ * Return: Nothing.
+ */
 char *_memcpy(char *dest, char *src, unsigned int n)
 {
-	unsigned int a;
+	unsigned int b;
 
-	for (a = 0; a < n; ++a)
-		dest[a] = src[a];
-
+	for (b = 0; b < n; b++)
+		dest[b] = src[b];
 	return (dest);
-
 }
