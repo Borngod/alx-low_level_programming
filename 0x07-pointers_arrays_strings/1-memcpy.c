@@ -1,22 +1,18 @@
-#include "main.h"
-#define NULL 0
+include "main.h"
 
 /**
- * _strchr - function to locate a character
- * @s: array strings
- * @c: character that needs to be found
- * Return: Always 0.
+ * _memcpy - prints buffer in hexa
+ * @dest: the array to copy over
+ * @src: the source to cpy
+ * @n: unsigned int variable
+ *
+ * Return: Nothing.
  */
-char *_strchr(char *s, char c)
+char *_memcpy(char *dest, char *src, unsigned int n)
 {
-	int a;
+	unsigned int a;
 
-	for (a = 0; s[a] != '\0'; a++)
-	{
-		if (s[a] == c)
-			return (&s[a]);
-	}
-	if (c == '\0')
-		return (&s[a]);
-	return (NULL);
+	for (a = 0; a < n; a++)
+		dest[a] = src[a];
+	return (dest);
 }
