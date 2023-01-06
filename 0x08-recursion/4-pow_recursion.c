@@ -1,16 +1,19 @@
 #include "main.h"
 
 /**
- * factorial - calculating factorial of integers
- * @n: integer value being passed
- * Return: Always 0 if n is 0 or 1 else print factorial
+ * _pow_recursion - function to print result of base value raised to power
+ * @x: base value
+ * @y: power value
+ * Return: Always 0.
  */
-int factorial(int n)
+int _pow_recursion(int x, int y)
 {
-	if (n == 0)
-		return (1);
-	if (n < 0)
+	if (y < 0)
 		return (-1);
+	else if (y == 0)
+		return (1);
+	else if (x == 0)
+		return (0);
 	else
-		return (n * factorial(n - 1));
+		return (x * _pow_recursion(x, y - 1));
 }
