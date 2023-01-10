@@ -1,17 +1,15 @@
-#include <stdlib.h>
 #include <stdio.h>
-#include "holberton.h"
 
 /**
- * main - function to print file name
- * @argc: count of the arguments supplied to the program and the
- * @argv: an array of pointers to the strings
- * Return: Always 0
+ * main - Prints the program name, followed by a new line.
+ * @argc: The number of arguments supplied to the program.
+ * @argv: An array of pointers to the arguments.
+ *
+ * Return: Always o.
  */
-
-int main(int argc, char *argv[])
+int main(int __attribute__((__unused__)) argc, char *argv[])
 {
-	if (argc > 0)
-		printf("%s\n", argv[0]);
+	printf("%s\n", argv[0]);
+
 	return (0);
 }
