@@ -1,39 +1,31 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <udis86.h>
 
 /**
-  * main - ...
-  * @argc: ...
-  * @argv: ...
-  *
-  * Return: ...
-  */
-int main(int argc, char *argv[])
+ * main - function to print its own opcode
+ * @argc: number of arguments
+ * @argv: argument variables passed
+ * Return: Always 0/
+ */
+int main(int argc, char **argv)
 {
-	ud_t ud_obj;
-	int val = 0, i = 0;
+	int a, b;
+	char *s;
 
-	if (argc == 2)
+	if (argc < 2)
 	{
-		val = atoi(argv[1]);
-
-		if (val < 0)
-		{
-			printf("Error\n");
-			exit(2);
-		}
-
-		ud_unit(&ud_obj);
-		ud_set_input_buffer(&ud_obj, argv[1], val);
-		ud_set_mode(&ud_obj, 64);
-		ud_set_syntax(&ud_obj, UD_SYN_INTEL);
-
-		while (ud_disassemble(&ud_obj))
-		{
-			printf("\t%s\n", ud_insn_hex(&ud_obj));
-		}
+		printf("Error\n");
+		exit(1);
 	}
-
+	a = atoi(argv[1]);
+	if (a < 0)
+	{
+		printf("Error\n");
+		exit(2);
+	}
+	s = (char *)main;
+	for (b = 0; b < a - 1; b++)
+		printf("%02hhx ", s[b]);
+	printf("%02hhx\n", s[b]);
 	return (0);
 }
