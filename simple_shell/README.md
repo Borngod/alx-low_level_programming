@@ -1,1 +1,1 @@
-by Bernard Appiah & Angels Ayivi 
+A simple shell by Bernard Appiah & Angels Ayivi 
